@@ -11,33 +11,79 @@ body{
   background: url('images/bg-desktop.svg') no-repeat, hsl(257, 40%, 49%);
   color: white;
   background-size: cover;
+  display: grid;
+  grid-template-areas: 'cabecalho' 'conteudo' 'redes-sociais' 'footer';
+  grid-template-rows: 10vh 80vh 1fr 2vh ;
 }
 
 .cabecalho{
+  grid-area: cabecalho;
   padding: 2rem;
 }
-
-.conteudo{
-  display: flex;
-}
-
-.conteudo h1{
-  font-family: Poppins;
-  font-weight: 600;
-  font-size: 2rem;
-}
-.conteudo p{
-  font-family: 'Open Sans';
-  font-weight: 400;
-  font-size: 1.2rem;
-}
-
 .cabecalho img{
   width: 20rem;
 }
 
-.redes-sociais img{
+.conteudo{
+  grid-area: conteudo;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.conteudo img{
+  width: 100%;
+}
+
+.informacoes{
+  display: flex;
+  flex-direction: column;
+}
+
+.conteudo .informacoes h1{
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.conteudo .informacoes  p{
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.button{
+  align-self: flex-start;
+  background-color: #fff;
+  color: hsl(257, 40%, 49%);
+  
+}
+
+.redes-sociais{
+  grid-area: redes-sociais;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 1rem 7rem;
+  gap: 1.5rem;
+}
+
+
+.redes-sociais .rede{
   width: 1rem;
+  height: 1rem;
+  border: .1rem solid #000;
+  filter: invert(1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.redes-sociais div > img{
+  width: 2rem;
+  height: 2rem;
 }
 
 /*Padrão do Front end Mentor*/
@@ -47,4 +93,9 @@ body{
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+footer{
+  grid-area: footer;
+  margin-bottom: .5rem;
 }
