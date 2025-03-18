@@ -8,12 +8,12 @@
 }
 
 body{
-  background: url('images/bg-desktop.svg') no-repeat, hsl(257, 40%, 49%);
+  background: hsl(257, 40%, 49%) url('images/bg-desktop.svg') center no-repeat fixed;
   color: white;
   background-size: cover;
   display: grid;
   grid-template-areas: 'cabecalho' 'conteudo' 'redes-sociais' 'footer';
-  grid-template-rows: 10vh 80vh 1fr 2vh ;
+  grid-template-rows: 15vh 75vh 1fr 1vh;
 }
 
 .cabecalho{
@@ -28,6 +28,8 @@ body{
   grid-area: conteudo;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin: auto 5rem;
+  gap: 3rem
 }
 
 .conteudo img{
@@ -37,26 +39,33 @@ body{
 .informacoes{
   display: flex;
   flex-direction: column;
+  gap: 2rem;
 }
 
 .conteudo .informacoes h1{
   font-family: Poppins;
   font-weight: 600;
   font-size: 3rem;
-  margin-bottom: 2rem;
 }
 .conteudo .informacoes  p{
   font-family: 'Open Sans';
   font-weight: 400;
   font-size: 1.5rem;
-  margin-bottom: 1rem;
 }
 
-.button{
+.conteudo .informacoes .button{
   align-self: flex-start;
+}
+.conteudo .informacoes .button p{
   background-color: #fff;
   color: hsl(257, 40%, 49%);
-  
+  padding: 1rem 4rem;
+  border-radius: 3rem;
+  transition: 0.3s;
+}
+.conteudo .informacoes .button p:hover{
+  color: hsl(300, 69%, 71%);
+  cursor: pointer;
 }
 
 .redes-sociais{
@@ -67,8 +76,6 @@ body{
   margin: 1rem 7rem;
   gap: 1.5rem;
 }
-
-
 .redes-sociais .rede{
   width: 1rem;
   height: 1rem;
@@ -80,22 +87,46 @@ body{
   justify-content: center;
   padding: 2rem;
 }
+.redes-sociais .rede:hover{
+  cursor: pointer;
+}
 
 .redes-sociais div > img{
   width: 2rem;
   height: 2rem;
 }
 
+@media (max-width: 900px){
+  .conteudo{
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    margin: 0 auto;
+  }
+  .conteudo > .informacoes{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .conteudo .informacoes .button {
+    align-self: center;
+  }
+  body .rodape >.redes-sociais{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+}
 /*Padrão do Front end Mentor*/
-.attribution {
-  font-size: 1.1rem;
+.attribution, a {
+  font-size: 1.2rem;
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: yellow;
 }
-
 footer{
   grid-area: footer;
-  margin-bottom: .5rem;
+  font-family: Poppins;
 }
