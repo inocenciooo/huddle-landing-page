@@ -1,24 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 62.5%;
-}
-
-body{
-  background: hsl(257, 40%, 49%) url('images/bg-desktop.svg') center no-repeat fixed;
-  color: white;
-  background-size: cover;
-  display: grid;
-  grid-template-areas: 'cabecalho' 'conteudo' 'redes-sociais' 'footer';
-  grid-template-rows: 15vh 75vh 1fr 1vh;
-}
-
 .cabecalho{
   grid-area: cabecalho;
-  padding: 2rem;
+  padding: 3rem 5rem;
 }
 .cabecalho img{
   width: 20rem;
@@ -27,41 +9,42 @@ body{
 .conteudo{
   grid-area: conteudo;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: auto 5rem;
-  gap: 3rem
+  grid-template-columns: 1.2fr 1fr;
+  margin: auto 10rem;
+  gap: 5rem
 }
-
-.conteudo img{
+.conteudo  img{
   width: 100%;
+  align-self: center;
 }
 
 .informacoes{
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding-top: 10%;
+  padding-bottom: 30%;
 }
-
 .conteudo .informacoes h1{
   font-family: Poppins;
   font-weight: 600;
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 .conteudo .informacoes  p{
   font-family: 'Open Sans';
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
-
 .conteudo .informacoes .button{
   align-self: flex-start;
 }
 .conteudo .informacoes .button p{
   background-color: #fff;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
   color: hsl(257, 40%, 49%);
   padding: 1rem 4rem;
   border-radius: 3rem;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 .conteudo .informacoes .button p:hover{
   color: hsl(300, 69%, 71%);
@@ -86,39 +69,47 @@ body{
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  transition: 0.3s;
 }
 .redes-sociais .rede:hover{
+  filter: invert(70%);
   cursor: pointer;
 }
 
-.redes-sociais div > img{
+.rodape .redes-sociais div > img{
   width: 2rem;
   height: 2rem;
 }
 
 @media (max-width: 900px){
+  html > body{
+    background: hsl(257, 40%, 49%) url('../images/bg-mobile.svg') no-repeat;
+    background-size: contain;
+  }
   .conteudo{
     display: flex;
     flex-direction: column;
     width: 70vw;
-    margin: 0 auto;
+    margin: 4vh auto;
   }
   .conteudo > .informacoes{
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding: 0;
   }
   .conteudo .informacoes .button {
     align-self: center;
   }
-  body .rodape >.redes-sociais{
+  body .rodape > .redes-sociais{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 10vh;
     margin-bottom: 1rem;
   }
 }
-/*Padrão do Front end Mentor*/
+
 .attribution, a {
   font-size: 1.2rem;
   text-align: center;
