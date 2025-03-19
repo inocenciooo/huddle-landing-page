@@ -17,11 +17,19 @@ A landing page foi criada para fins educacionais e serve como ponto de partida p
 - **HTML5**
 - **CSS3**
 
-## Resultado da Landing Page
+## Resultados da Landing Page:
 
-Acesse o link abaixo para visualizar o projeto no *GitHub Pages*:
+### Versão Desktop
 
-- [https://inocenciooo.github.io/huddle-landing-page/](https://inocenciooo.github.io/huddle-landing-page/)
+<img src="./resultado-final-imagens-exemplos/Macbook-Air-1559x975.png" height="400px" style="display: block; margin: auto;">
+
+### Versão Mobile
+
+<img src="./resultado-final-imagens-exemplos/iPhone-14-Pro-Max-430x986.png" height="500px" style="display: block; margin: auto;">
+<br>
+<p><a href="https://inocenciooo.github.io/huddle-landing-page/" target="_blanck">Acesse aqui</a> para visualizar o projeto no <strong>GitHub Pages</strong> com mais detalhes!</p>
+
+
 
 ## Contribuições e Sugestões
 

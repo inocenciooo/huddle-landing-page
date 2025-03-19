@@ -85,12 +85,14 @@
   html > body{
     background: hsl(257, 40%, 49%) url('../images/bg-mobile.svg') no-repeat;
     background-size: contain;
+    display: flex;
+    flex-direction: column;
   }
   .conteudo{
     display: flex;
     flex-direction: column;
     width: 70vw;
-    margin: 4vh auto;
+    margin: 0 auto;
   }
   .conteudo > .informacoes{
     display: flex;
@@ -107,6 +109,9 @@
     align-items: center;
     height: 10vh;
     margin-bottom: 1rem;
+  }
+  footer{
+    margin-bottom: 2vh;
   }
 }
 
